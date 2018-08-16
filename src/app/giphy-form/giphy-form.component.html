@@ -1,22 +1,9 @@
-<!-- <form #giphyform="ngForm">
-
-  <input id="searchtext" placeholder="Search For Giphy" type="text" name="searchTerm" [(ngModel)] required #searchTerm="ngModel" (keyup.enter)="onClick(searchTerm.value)">
-
-
-  <button (click)="onClickMe()" id="searchgifs" type="submit"> Search For Gif
-
-  </button> {{clickMessage}}
-</form> -->
-
-
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
   <input name="value" ngModel required #value="ngModel">
 
   <button>Search For Gif</button>
 </form>
 
-<!-- <p>First name value: {{ first.value }}</p>
-    <p>First name valid: {{ first.valid }}</p> -->
 <p>Form value: {{ f.value | json }}</p>
 <p>Form valid: {{ f.valid }}</p>
 <div class="inner">

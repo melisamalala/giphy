@@ -1,11 +1,18 @@
 <h1>Your GIFS</h1>
-<div class="container">
+<div class="row">
 
-  <div class="row">
-    <blockquote class="text-center text-lg">
-      <p>{{giphy.giphy}}</p>
-      <footer>{{data.giphy}}</footer>
-    </blockquote>
+  <div *ngFor='let g of giphy$ , let i = index' class="col-md-3">
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action active">
+      {{giphy$[i].title}}
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <img src="{{giphy$[i].images.preview_gif.url}}" >
+
+      </a>
+      <a href="#" class="list-group-item list-group-item-action disabled">Morbi leo risus
+      </a>
+    </div>
   </div>
 
 </div>
